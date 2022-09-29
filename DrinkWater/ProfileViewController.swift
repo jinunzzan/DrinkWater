@@ -61,10 +61,27 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func saveBtn(_ sender: Any) {
-         
+        
+        
+        let userNickName = UserDefaults.standard.string(forKey: "nickname")
+        let userNickNameSet = tfNickname.text
+        UserDefaults.standard.set(userNickNameSet, forKey: "nickname")
+        
+        let userHeight = UserDefaults.standard.integer(forKey: "height")
+        let userHeightSet = tfHeight.text
+        UserDefaults.standard.set(userHeightSet, forKey: "height")
+        
+        
+        let userWeight = UserDefaults.standard.integer(forKey: "weight")
+        let userWeightSet = tfWeight.text
+        UserDefaults.standard.set(userWeightSet, forKey: "weight")
         
        
-       
+        
+        show.text = ": \(UserDefaults.standard.string(forKey: "nickname")!)"
+        
+        
+        
     }
     
 }

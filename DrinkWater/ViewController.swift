@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         
         //yourWater
         yourWater.textColor = .white
-        yourWater.text = "님의 하루 물 섭취 권장량은 2.1L 입니다"
+       
         yourWater.textAlignment = .center
         yourWater.font = UIFont.systemFont(ofSize: 13)
         
@@ -54,15 +54,36 @@ class ViewController: UIViewController {
     }
     
     @IBAction func waterBtn(_ sender: UIButton) {
-        perposerWater = 2100
-        totalWater = 1200
+       
+       
+        perposerWater = Double((UserDefaults.standard.integer(forKey: "height") + UserDefaults.standard.integer(forKey: "weight")) / 100)
+        yourWater.text = "\(UserDefaults.standard.string(forKey: "nickname"))님의 하루 물 섭취 권장량은 \(perposerWater)L 입니다"
+        print(perposerWater)
+        //  (160 + 50) / 100  2.1 L
+        
+        
+        
+        
+       insertWater = UserDefaults.standard.integer(forKey: "water")
+        let insertWaterSet = ml.text
+        UserDefaults.standard.set(insertWaterSet, forKey: "water")
+        
+        totalWater += UserDefaults.standard.integer(forKey: "water")
+        
+        print(totalWater)
+       
+        
+        
         
         //목표의 몇퍼센트구하기
-        totalWater += insertWater
+        
+        
+      
+//        totalWater += UserDefaults.standard.double(forKey: "water")
         purposeWaterPer =
-        totalWater / perposerWater * 100
-        var waterPer = String(format: "%.0f", purposeWaterPer)
-        var totalWater = String(format: "%.0f", totalWater)
+        Double(totalWater) / perposerWater * 100
+        let waterPer = String(format: "%.0f", purposeWaterPer)
+        let totalWater = String(format: "%.0f", totalWater)
         //퍼센트
         // 출력
         // 퍼센트
@@ -70,7 +91,6 @@ class ViewController: UIViewController {
         percent.text = "목표의 \(waterPer)%"
         percent.font = UIFont.systemFont(ofSize: 15)
         // 오늘 섭취량
-        
         ml.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
         ml.text = "\(totalWater)ml"
         ml.textColor = .white
@@ -86,19 +106,30 @@ class ViewController: UIViewController {
         let img7: UIImage = UIImage(named: "1-7")!
         let img8: UIImage = UIImage(named: "1-8")!
         
-       
-            }
-            
-        }
-    
-
         
+        
+    }
+    
+    
+    @IBAction func resetBtn(_ sender: UIButton) {
+        UserDefaults.standard.removeObject(forKey: "nickname")
+        yourWater.text = ""
+        UserDefaults.standard.removeObject(forKey: "height")
+        percent.text = ""
+        UserDefaults.standard.removeObject(forKey: "weight")
+        ml.text = ""
+        
+    }
+    
+    
+    
     
     
     var perposerWater = 0.0 // 하루권장량
     var purposeWaterPer = 0.0 // 목표대비퍼센트
-    var totalWater = 0.0
+    var totalWater = 0
     // 오늘 마신 양
-    var insertWater = 0.0
+    var insertWater = 0
     
-
+    
+}
