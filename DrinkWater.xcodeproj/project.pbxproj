@@ -17,6 +17,7 @@
 		5934B5F228E4761800052F03 /* DrinkWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934B5F128E4761800052F03 /* DrinkWaterTests.swift */; };
 		5934B5FC28E4761800052F03 /* DrinkWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934B5FB28E4761800052F03 /* DrinkWaterUITests.swift */; };
 		5934B5FE28E4761800052F03 /* DrinkWaterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934B5FD28E4761800052F03 /* DrinkWaterUITestsLaunchTests.swift */; };
+		5934B60B28E47BCB00052F03 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934B60A28E47BCB00052F03 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5934B5F728E4761800052F03 /* DrinkWaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkWaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5934B5FB28E4761800052F03 /* DrinkWaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkWaterUITests.swift; sourceTree = "<group>"; };
 		5934B5FD28E4761800052F03 /* DrinkWaterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkWaterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5934B60A28E47BCB00052F03 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				5934B5D728E4761700052F03 /* AppDelegate.swift */,
 				5934B5D928E4761700052F03 /* SceneDelegate.swift */,
 				5934B5DB28E4761700052F03 /* ViewController.swift */,
+				5934B60A28E47BCB00052F03 /* ProfileViewController.swift */,
 				5934B5DD28E4761700052F03 /* Main.storyboard */,
 				5934B5E328E4761800052F03 /* Assets.xcassets */,
 				5934B5E528E4761800052F03 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5934B60B28E47BCB00052F03 /* ProfileViewController.swift in Sources */,
 				5934B5DC28E4761700052F03 /* ViewController.swift in Sources */,
 				5934B5D828E4761700052F03 /* AppDelegate.swift in Sources */,
 				5934B5E228E4761700052F03 /* DrinkWater.xcdatamodeld in Sources */,
@@ -449,6 +453,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,6 +482,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
